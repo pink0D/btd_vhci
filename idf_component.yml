@@ -1,7 +1,7 @@
-description: btd_vhci - simple BTHID library for ESP32 
+description: btd_vhci - simple BTHID library for ESP32
 repository: https://github.com/pink0D/btd_vhci.git
 url: https://github.com/pink0D/btd_vhci
-version: 0.1.0
+version: 0.5.0
 dependencies:
   idf:
     version: ">5.1.0"
