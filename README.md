@@ -37,6 +37,7 @@ Generally, all code for the BT devices from the [USB Host Library Rev. 2.0](http
 - Bluetooth controller mode (BR/EDR Only)
 - BR/EDR Sync (HCI)
 - HCI mode (HCI)
+
 This should result in the following contents inside sdkconfig
 ```
 #
