@@ -15,6 +15,7 @@ Generally, all code for the BT devices from the [USB Host Library Rev. 2.0](http
 | PS4BT          | :white_check_mark: | :white_check_mark: |
 | PS5BT          | :white_check_mark: | :x: |
 | XBOXONESBT     | :white_check_mark: | :x: |
+| SPP (Serial Port Profile) | :x: | :x: |
 
 
 # Current limitations
@@ -66,7 +67,8 @@ CONFIG_BTDM_CTRL_PINNED_TO_CORE=0
 CONFIG_BTDM_CTRL_HCI_MODE_VHCI=y
 ```
 5. Rename `main.c` to `main.cpp` since you will have to use C++ classes from the library. Don't forget to update `CMakeLists.txt` and add `extern "C"` to `app_main`
-6. Declare global instance for desired device class, for example `PS4BT PS4;` Note that no reference to **BTD** is required since it is now accessed through a static singleton.
+6. Declare global instance for desired device class, for example `PS4BT PS4;` 
+Note that no reference to **BTD** is required since it is now accessed through a static singleton.
 7. Add initialization calls in main function 
 - `nvs_flash_init()` which is needed by ESP32 to initilize flash
 - `btd_vhci_init()`  library initialization
