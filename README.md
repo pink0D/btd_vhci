@@ -11,7 +11,7 @@ Generally, all code for the BT devices from the [USB Host Library Rev. 2.0](http
 
 | Device         | Code migrated    | Tested with real device |
 | :---           |    :----:        |         :----:          |
-| BTHID (generic keyboars and mouse)          | :white_check_mark: | :x: |
+| BTHID (generic keyboards and mouse)          | :white_check_mark: | :x: |
 | PS4BT          | :white_check_mark: | :white_check_mark: |
 | PS5BT          | :white_check_mark: | :x: |
 | XBOXONESBT     | :white_check_mark: | :x: |
