@@ -32,12 +32,12 @@ Generally, all code for the BT devices from the [USB Host Library Rev. 2.0](http
 - by using IDF Component Manager `idf.py add-dependency -pink0d/btd_vhci` (the command should be run from ESP-IDF Terminal if you are using VSCode plugin)
 - alternatively, you can just copy repo contents to `components\btd_vhci` inside project root directory and manually add dependency  `REQUIRES btd_vhci nvs_flash` to the main component's `CMakeLists.txt`
 4. Make changes to sdkconfig with ESP-IDF's Menuconfig:
-- Bluetooth (enabled)
-- Host (disabled)
-- Controller (enabled)
-- Bluetooth controller mode (BR/EDR Only)
-- BR/EDR Sync (HCI)
-- HCI mode (HCI)
+- Bluetooth: Enabled
+- Host: Disabled
+- Controller: Enabled
+- Bluetooth controller mode: BR/EDR Only
+- BR/EDR Sync: HCI
+- HCI mode: VHCI
 
 This should result in the following contents inside sdkconfig
 ```
