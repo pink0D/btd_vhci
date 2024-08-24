@@ -71,9 +71,12 @@ CONFIG_BTDM_CTRL_HCI_MODE_VHCI=y
 Note that no reference to **BTD** is required since it is now accessed through a static singleton.
 7. Add initialization calls in main function 
 - `nvs_flash_init()` which is needed by ESP32 to initilize flash
-- `btd_vhci_init()`  library initialization
+- `btd_vhci_init()`  library initialization, which also creates default background bluetooth update task 
 - `xTaskCreatePinnedToCore(...)` to run your program code
 - `btd_vhci_autoconnect(...)` to run auto-pairing task. When started, it looks for a saved MAC in ESP32's flash. If no saved MAC is found, the BTD is put in *'Pairing'* mode. When a new device is paired, it's MAC is saved to flash. Next time when the ESP32 is started, the BTD is put in *'Waiting for connections'* mode. If no connection is made in 30 seconds, the BTD goes to pairing mode again.
+8. Implement task for reading controller's state
+- it is important to call `btd_vhci_mutex_lock();` and `btd_vhci_mutex_unlock();` when accessing BT device instance to prevent data races with default background bluetooth update task 
+- alternatively, you can call `btd_vhci_init(false);` and manually implement bluetooth update task with a call to `btd_vhci_update();` inside it (see btd_vhci.cpp for details)
 
 Now the `main.cpp` should look like this:
 ```CPP
