@@ -37,8 +37,7 @@ esp_err_t btd_vhci_send_packet(uint8_t packet_type, uint8_t *packet, int size) {
     // put packet type before payload
     sendbuf[0] = packet_type;
 
-    for (int i=0; i<size; i++)
-        memcpy(&sendbuf[1],packet,size);
+    memcpy(&sendbuf[1],packet,size);
 
     // send packet
     esp_vhci_host_send_packet(sendbuf, size+1);
