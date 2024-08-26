@@ -93,7 +93,7 @@ PS4BT PS4;
 bool printAngle, printTouch;
 uint8_t oldL2Value, oldR2Value;
 
-static const char *LOG_TAG = "habr main";
+static const char *LOG_TAG = "main";
 
 // print controller status
 void ps4_print() {
@@ -221,6 +221,10 @@ extern "C" void app_main(void)
     // main task should not return
 }
 ```
+
+# Example projects
+
+Example projects can be found here: [btd_vhci_examples_ESP-IDF](https://github.com/pink0D/btd_vhci_examples_ESP-IDF)
 
 # More examples
 
