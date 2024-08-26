@@ -1,5 +1,5 @@
 # About
-This is an adaptation of Bluetooth classes from the [USB Host Library Rev. 2.0](https://github.com/felis/USB_Host_Shield_2.0) for running on ESP32 chips with embedded Bluetooth controller. With whis library, you can connect PlayStation 4, Playstation 5 and Xbox One controllers to a ESP32 project.
+This is an adaptation of Bluetooth classes from the [USB Host Library Rev. 2.0](https://github.com/felis/USB_Host_Shield_2.0) for running on ESP32 chips with embedded Bluetooth controller. With this library, you can connect PlayStation 4, Playstation 5 and Xbox One controllers to a ESP32 project.
 
 # How it works
 
@@ -11,11 +11,11 @@ Generally, all code for the BT devices from the [USB Host Library Rev. 2.0](http
 
 | Device         | Code migrated    | Tested with real device |
 | :---           |    :----:        |         :----:          |
-| BTHID (generic keyboard and mouse)          | :white_check_mark: | :x: |
-| PS4BT (Dualshock 4)          | :white_check_mark: | :white_check_mark: |
-| PS5BT (DualSense)      | :white_check_mark: | :x: |
-| XBOXONESBT  (Xbox Wireless Controller)   | :white_check_mark: | :x: |
-| SPP (Serial Port Profile) | :x: | :x: |
+| **BTHID** (generic keyboard and mouse)          | :white_check_mark: | :x: |
+| **PS4BT** (Dualshock 4)          | :white_check_mark: | :white_check_mark: |
+| **PS5BT** (DualSense)      | :white_check_mark: | :x: |
+| **XBOXONESBT**  (Xbox Wireless Controller)   | :white_check_mark: | :x: |
+| **SPP** (Serial Port Profile) | :x: | :x: |
 
 
 # Current limitations
